@@ -59,3 +59,38 @@ declare const APP_CONFIG_TITLE_CORE: string;
 declare const APP_CONFIG_TITLE_CSVC: string;
 declare const APP_CONFIG_TITLE_THU_VIEN: string;
 declare const APP_CONFIG_TITLE_QLVB: string;
+declare namespace TodoList {
+	type TodoItem = {
+		content?: string;
+		category?: string;
+		color?: string;
+	};
+}
+
+declare namespace HocTap {
+	type Subject = {
+		id: string;
+		name: string;
+		createdAt?: string;
+	};
+
+	type LearningProgress = {
+		id: string;
+		subjectId: string;
+		subjectName?: string;
+		date: string;
+		duration: number;
+		content: string;
+		notes: string;
+		createdAt?: string;
+	};
+
+	type MonthlyGoal = {
+		id: string;
+		subjectId: string;
+		subjectName?: string;
+		month: string;
+		targetHours: number;
+		createdAt?: string;
+	};
+}
