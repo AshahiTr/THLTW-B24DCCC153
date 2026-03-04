@@ -48,12 +48,12 @@
 		icon: 'BgColorsOutlined',
 		component: './DoanSo',
 	},
-	// {
-	// 	path: '/hoc-tap',
-	// 	name: 'Quản lý Học tập',
-	// 	icon: 'BookOutlined',
-	// 	component: './HocTap',
-	// },
+	{
+		path: '/hoc-tap',
+		name: 'Quản lý Học tập',
+		icon: 'BookOutlined',
+		component: './HocTap',
+	},
 
 	// DANH MUC HE THONG
 	// {
