@@ -42,7 +42,18 @@
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
 	},
-
+	{
+		path: '/oan-tu-ti',
+		name: 'Oẳn Tù Tì',
+		icon: 'PlayCircleOutlined',
+		component: './OanTuTi',
+	},
+	 {
+		path: '/quanlycauhoi',
+		name: 'Quản lý ngân hàng câu hỏi',
+		icon: 'OrderedListOutlined',
+		component: './QuanLyNganHangCauHoi',
+	},
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
