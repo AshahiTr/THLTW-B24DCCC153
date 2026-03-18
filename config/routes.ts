@@ -43,6 +43,44 @@
 		component: './TodoList',
 	},
 
+	// DỊCH VỤ LỊCH HẸN
+	{
+		path: '/dich-vu-lich-hen',
+		name: 'Dịch Vụ Lịch Hẹn',
+		icon: 'CalendarOutlined',
+		routes: [
+			{
+				path: '/dich-vu-lich-hen',
+				redirect: '/dich-vu-lich-hen/booking',
+			},
+			{
+				path: '/dich-vu-lich-hen/booking',
+				name: 'Đặt Lịch Hẹn',
+				component: './DichVuLichHen/Booking',
+			},
+			{
+				path: '/dich-vu-lich-hen/staff',
+				name: 'Quản Lý Nhân Viên',
+				component: './DichVuLichHen/StaffManagement',
+			},
+			{
+				path: '/dich-vu-lich-hen/service',
+				name: 'Quản Lý Dịch Vụ',
+				component: './DichVuLichHen/ServiceManagement',
+			},
+			{
+				path: '/dich-vu-lich-hen/review',
+				name: 'Đánh Giá & Phản Hồi',
+				component: './DichVuLichHen/ReviewManagement',
+			},
+			{
+				path: '/dich-vu-lich-hen/statistics',
+				name: 'Thống Kê & Báo Cáo',
+				component: './DichVuLichHen/Statistics',
+			},
+		],
+	},
+
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
