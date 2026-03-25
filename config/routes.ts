@@ -42,6 +42,40 @@
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
 	},
+	{
+		path: '/quan-ly-van-bang',
+		name: 'Quản Lý Văn Bằng',
+		icon: 'FileTextOutlined',
+		routes: [
+			{
+				path: '/quan-ly-van-bang/certificate-books',
+				name: 'Sổ Văn Bằng',
+				component: './QuanLyVanBang/sachvanbang',
+			},
+			{
+				path: '/quan-ly-van-bang/graduation-decisions',
+				name: 'Quyết Định Tốt Nghiệp',
+				component: './QuanLyVanBang/quyetdinhtotnghiep',
+			},
+			{
+				path: '/quan-ly-van-bang/form-field-config',
+				name: 'Cấu Hình Biểu Mẫu',
+				component: './QuanLyVanBang/cauhinhbieumau',
+			},
+			{
+				path: '/quan-ly-van-bang/certificate-infos',
+				name: 'Thông Tin Văn Bằng',
+				component: './QuanLyVanBang/thongtinvanbang',
+			},
+		],
+	},
+	{
+		path: '/tra-cuu-van-bang',
+		name: 'Tra Cứu Văn Bằng',
+		component: './QuanLyVanBang/tracuuvanbang',
+		layout: false,
+		hideInMenu: true,
+	},
 
 	// DANH MUC HE THONG
 	// {
