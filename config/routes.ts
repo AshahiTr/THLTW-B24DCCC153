@@ -42,6 +42,12 @@
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
 	},
+	{
+		path: '/clubs',
+		name: 'Quản Lý Câu Lạc Bộ',
+		icon: 'TeamOutlined',
+		component: './Clubs',
+	},
 
 	// DANH MUC HE THONG
 	// {
