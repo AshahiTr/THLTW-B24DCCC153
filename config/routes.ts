@@ -42,6 +42,38 @@
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
 	},
+	{
+		name: 'Kế Hoạch Du Lịch',
+		path: '/lich-du-lich',
+		icon: 'EnvironmentOutlined',
+		routes: [
+			{
+				path: '/lich-du-lich',
+				name: 'Trang Chủ',
+				component: './LichDuLich',
+			},
+			{
+				path: '/lich-du-lich/destinations',
+				name: 'Khám phá',
+				component: './LichDuLich/Destinations',
+			},
+			{
+				path: '/lich-du-lich/itinerary',
+				name: 'Lịch Trình',
+				component: './LichDuLich/ItineraryList',
+			},
+			{
+				path: '/lich-du-lich/budget',
+				name: 'Ngân Sách',
+				component: './LichDuLich/BudgetManagement',
+			},
+			{
+				path: '/lich-du-lich/admin',
+				name: 'Quản Trị',
+				component: './LichDuLich/AdminDashboard',
+			},
+		],
+	},
 
 	// DANH MUC HE THONG
 	// {
