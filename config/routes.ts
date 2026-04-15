@@ -43,6 +43,13 @@
 		component: './TodoList',
 	},
 
+	{
+  		path: '/quan-ly-phong-hoc',
+  		name: 'QuanLyPhongHoc',
+  		icon: 'HomeOutlined',
+  		component: './QuanLyPhongHoc',
+	},
+
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
