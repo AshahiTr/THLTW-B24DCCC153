@@ -1,0 +1,230 @@
+@primary: #1677ff;
+
+.blog-detail {
+  min-height: 100vh;
+  background: #f8fafc;
+
+  // ── Hero ──────────────────────────────────────────────────
+  &__hero {
+    height: 420px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+
+    @media (max-width: 576px) {
+      height: 320px;
+    }
+  }
+
+  &__hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.25) 0%,
+      rgba(0,0,0,0.7) 70%,
+      rgba(0,0,0,0.85) 100%
+    );
+  }
+
+  &__hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 32px 24px;
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  &__back-btn {
+    margin-bottom: 20px;
+    border-color: rgba(255,255,255,0.5) !important;
+    color: rgba(255,255,255,0.9) !important;
+    border-radius: 20px !important;
+
+    &:hover {
+      border-color: #fff !important;
+      color: #fff !important;
+    }
+  }
+
+  &__hero-tags {
+    margin-bottom: 12px;
+
+    .ant-tag {
+      font-size: 12px;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+  }
+
+  &__hero-title {
+    color: #fff !important;
+    font-size: 32px !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    margin-bottom: 16px !important;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+
+    @media (max-width: 576px) {
+      font-size: 22px !important;
+    }
+  }
+
+  &__hero-meta {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    color: rgba(255,255,255,0.75);
+    font-size: 13px;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+
+  // ── Layout ─────────────────────────────────────────────────
+  &__layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 24px 60px;
+  }
+
+  // ── Article ────────────────────────────────────────────────
+  &__article {
+    border-radius: 12px !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important;
+  }
+
+  &__summary {
+    padding: 16px 20px;
+    background: #f0f7ff;
+    border-left: 4px solid @primary;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 24px;
+  }
+
+  &__footer-tags {
+    margin-top: 8px;
+  }
+
+  // ── Markdown content ───────────────────────────────────────
+  &__content {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    word-break: break-word;
+
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 700;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    h1 { font-size: 28px; border-bottom: 2px solid #f0f0f0; padding-bottom: 8px; }
+    h2 { font-size: 22px; }
+    h3 { font-size: 18px; color: @primary; }
+
+    p {
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+
+    pre {
+      background: #1e293b;
+      border-radius: 10px;
+      padding: 20px;
+      overflow-x: auto;
+      margin: 20px 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+
+      code {
+        background: none;
+        color: #e2e8f0;
+        font-size: 14px;
+        font-family: 'Fira Code', 'Consolas', monospace;
+        line-height: 1.6;
+        padding: 0;
+      }
+    }
+
+    code {
+      background: #f0f4ff;
+      color: #3b5bdb;
+      padding: 2px 7px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-family: 'Fira Code', monospace;
+      border: 1px solid #dde5ff;
+    }
+
+    ul {
+      padding-left: 24px;
+      margin-bottom: 16px;
+
+      li {
+        list-style: disc;
+        margin-bottom: 8px;
+        line-height: 1.7;
+      }
+    }
+
+    a {
+      color: @primary;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    strong {
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px solid #f0f0f0;
+      margin: 32px 0;
+    }
+  }
+
+  // ── Author Card ────────────────────────────────────────────
+  &__author-card {
+    border-radius: 12px !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important;
+    position: sticky;
+    top: 20px;
+  }
+
+  &__author {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+    &-avatar {
+      border: 3px solid #e0eaff;
+      box-shadow: 0 2px 8px rgba(22, 119, 255, 0.15);
+      flex-shrink: 0;
+    }
+  }
+
+  // ── Related ────────────────────────────────────────────────
+  &__related {
+    margin-top: 40px;
+
+    &-title {
+      margin-bottom: 20px !important;
+      font-size: 18px !important;
+      font-weight: 700 !important;
+    }
+  }
+}

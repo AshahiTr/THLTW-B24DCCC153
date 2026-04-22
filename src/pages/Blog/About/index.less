@@ -1,0 +1,172 @@
+@primary: #1677ff;
+
+.blog-about {
+  min-height: 100vh;
+  background: #f8fafc;
+
+  // ── Hero ──────────────────────────────────────────────────
+  &__hero {
+    position: relative;
+    padding: 72px 24px 52px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  &__hero-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #0c1f3f 100%);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -20%;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(22, 119, 255, 0.15) 0%, transparent 60%);
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 60%);
+      border-radius: 50%;
+    }
+  }
+
+  &__hero-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__avatar-wrap {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  &__avatar {
+    border: 4px solid rgba(255,255,255,0.15) !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3) !important;
+  }
+
+  &__avatar-ring {
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    border: 2px dashed rgba(22, 119, 255, 0.4);
+    animation: spin-slow 20s linear infinite;
+  }
+
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+
+  &__name {
+    color: #fff !important;
+    font-size: 36px !important;
+    font-weight: 800 !important;
+    margin-bottom: 8px !important;
+  }
+
+  &__role {
+    color: rgba(255,255,255,0.6) !important;
+    font-size: 16px !important;
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  &__social-btn {
+    background: rgba(255,255,255,0.1) !important;
+    border-color: rgba(255,255,255,0.2) !important;
+    color: #fff !important;
+    transition: all 0.2s !important;
+
+    &:hover {
+      background: rgba(255,255,255,0.2) !important;
+      border-color: rgba(255,255,255,0.4) !important;
+      transform: translateY(-2px);
+    }
+
+    &.linkedin:hover { background: rgba(0, 119, 181, 0.3) !important; }
+    &.twitter:hover  { background: rgba(29, 161, 242, 0.3) !important; }
+    &.email:hover    { background: rgba(234, 67, 53, 0.3) !important; }
+  }
+
+  // ── Body ──────────────────────────────────────────────────
+  &__body {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 36px 24px 60px;
+  }
+
+  &__card {
+    border-radius: 12px !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important;
+  }
+
+  &__section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__section-icon {
+    color: @primary;
+    font-size: 18px;
+  }
+
+  // ── Timeline ───────────────────────────────────────────────
+  &__timeline {
+    position: relative;
+    padding-left: 24px;
+  }
+
+  &__timeline-item {
+    position: relative;
+    padding-left: 28px;
+    padding-bottom: 28px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__timeline-dot {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: @primary;
+    border: 3px solid #e0eaff;
+    box-shadow: 0 0 0 3px rgba(22, 119, 255, 0.1);
+  }
+
+  &__timeline-line {
+    position: absolute;
+    left: 5px;
+    top: 18px;
+    width: 2px;
+    bottom: 0;
+    background: #e8edf5;
+  }
+
+  &__timeline-content {
+    // nothing extra
+  }
+}

@@ -1,0 +1,180 @@
+@import '~antd/es/style/themes/default.less';
+
+@primary: #1677ff;
+@accent: #06b6d4;
+
+.blog-home {
+  min-height: 100vh;
+  background: #f8fafc;
+
+  // ── Hero ──────────────────────────────────────────────────
+  &__hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 72px 24px 56px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 60% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 60%),
+                  radial-gradient(ellipse at 20% 80%, rgba(22, 119, 255, 0.12) 0%, transparent 50%);
+    }
+
+    // Decorative dots
+    &::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      width: 180px;
+      height: 180px;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 18px 18px;
+      border-radius: 50%;
+    }
+  }
+
+  &__hero-content {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(6, 182, 212, 0.15);
+    border: 1px solid rgba(6, 182, 212, 0.3);
+    color: @accent;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    letter-spacing: 0.3px;
+  }
+
+  &__hero-title {
+    color: #fff !important;
+    font-size: 42px !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    margin-bottom: 16px !important;
+
+    @media (max-width: 576px) {
+      font-size: 30px !important;
+    }
+  }
+
+  &__hero-accent {
+    color: @accent;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(to right, @accent, @primary);
+      border-radius: 2px;
+    }
+  }
+
+  &__hero-desc {
+    color: rgba(255, 255, 255, 0.65) !important;
+    font-size: 16px !important;
+    display: block;
+    margin-bottom: 32px;
+  }
+
+  &__search-wrap {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  &__search {
+    border-radius: 50px !important;
+    border: none !important;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2) !important;
+    height: 48px !important;
+    font-size: 15px !important;
+
+    .ant-input {
+      background: transparent;
+      color: #1a1a1a;
+      padding-left: 4px;
+    }
+
+    &-icon {
+      color: #999;
+      font-size: 16px;
+    }
+  }
+
+  // ── Filter ─────────────────────────────────────────────────
+  &__filter {
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
+    &-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    &-icon {
+      color: @primary;
+      font-size: 16px;
+    }
+
+    &-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: #555;
+      white-space: nowrap;
+    }
+
+    &-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      flex: 1;
+    }
+  }
+
+  // ── Content ────────────────────────────────────────────────
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 36px 24px 60px;
+  }
+
+  &__count {
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+
+  // ── Pagination ─────────────────────────────────────────────
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid #eee;
+  }
+}
