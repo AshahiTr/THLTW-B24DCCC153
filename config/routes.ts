@@ -42,6 +42,28 @@
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
 	},
+	{
+		name: 'Task Management',
+		path: '/tasks',
+		icon: 'CheckSquareOutlined',
+		routes: [
+			{
+				path: '/tasks/dashboard',
+				name: 'Dashboard',
+				component: './TaskDashboard',
+			},
+			{
+				path: '/tasks/kanban',
+				name: 'Kanban Board',
+				component: './TaskKanban',
+			},
+			{
+				path: '/tasks/list',
+				name: 'Task List',
+				component: './TaskList',
+			},
+		],
+	},
 
 	// DANH MUC HE THONG
 	// {
